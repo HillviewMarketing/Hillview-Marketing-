@@ -4,85 +4,113 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hillview Marketing</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f5f4f1;
-      color: #2e2e2e;
-      text-align: center;
-      padding: 30px 20px;
       margin: 0;
+      font-family: 'Lato', sans-serif;
+      background-color: #ffffff;
+      color: #333;
     }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      position: sticky;
+      top: 0;
+      background-color: #ffffff;
+      z-index: 1000;
+      border-bottom: 1px solid #e0e0e0;
     }
+
     .logo {
-      max-width: 240px;
-      margin-bottom: 20px;
-      margin-top: 10px;
-      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.03);
-      border-radius: 8px;
+      height: 85px;
+      width: auto;
     }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 600;
-      color: #3a3a3a;
-      margin-bottom: 10px;
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
     }
-    p.tagline {
-      font-style: italic;
-      color: #8e8e8e;
-      margin-bottom: 30px;
-    }
-    nav a {
-      margin: 0 12px;
-      color: #585858;
-      font-weight: 500;
+
+    .nav-links a {
       text-decoration: none;
-      font-size: 1rem;
+      color: #333;
+      font-weight: 500;
       transition: color 0.3s ease;
     }
-    nav a:hover {
-      color: #8b8b8b;
+
+    .nav-links a:hover {
+      color: #0070f3;
     }
-    .cta-button {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #bdb7ae;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: background 0.3s;
-      margin-top: 30px;
+
+    .hero {
+      padding: 100px 40px;
+      text-align: center;
+      background-color: #f8f8f8;
     }
-    .cta-button:hover {
-      background-color: #a89f96;
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      font-weight: 700;
     }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #666;
+    }
+
     footer {
-      margin-top: 40px;
-      font-size: 0.85rem;
-      color: #7c7c7c;
+      padding: 40px;
+      text-align: center;
+      background-color: #f0f0f0;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="hillview-logo.png" alt="Hillview Logo" class="logo" />
-    <h1>Hillview Marketing</h1>
-    <p class="tagline">Helping brands grow through performance-driven marketing.</p>
-    <nav>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Services</a>
+  <header class="navbar">
+    <img class="logo" src="https://github.com/HillviewMarketing/Hillview-Marketing-/blob/main/hillview-logo.png?raw=true" alt="Hillview Marketing Logo" />
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#strategy">Strategy</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <a href="mailto:info@hillviewmarketing.com" class="cta-button">Get in Touch</a>
-    <footer>
-      <p>&copy; 2025 Hillview Marketing | 5342 Clark Road #3332, Sarasota, FL 34233 | info@hillviewmarketing.com</p>
-    </footer>
-  </div>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Welcome to Hillview Marketing</h1>
+    <p>We help brands scale with strategy-driven growth and data-backed campaigns.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Hillview Marketing. All rights reserved.
+  </footer>
 </body>
 </html>
